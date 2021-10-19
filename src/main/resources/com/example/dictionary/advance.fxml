@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.AdvanceController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="API Translate">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: RGB(255,255,255);">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="60.0" layoutX="-1.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="605.0" />
+                        <Label layoutX="101.0" layoutY="3.0" text="API Google Translate">
+                           <font>
+                              <Font name="Bauhaus 93" size="45.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f2840" height="38.0" layoutX="25.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" width="547.0" />
+                        <TextField fx:id="tfAddAPI" layoutX="25.0" layoutY="103.0" prefHeight="51.0" prefWidth="479.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <TextArea fx:id="taAPI" editable="false" layoutX="25.0" layoutY="159.0" prefHeight="169.0" prefWidth="547.0" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextArea>
+                        <Button fx:id="btTrans" layoutX="505.0" layoutY="103.0" mnemonicParsing="false" onAction="#clickTrans" prefHeight="51.0" prefWidth="67.0" style="-fx-background-color: RGB(240,94,15);" text="Dịch" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font></Button>
+                        <Button fx:id="btaBack" layoutX="183.0" layoutY="331.0" mnemonicParsing="false" onAction="#clickABack" prefHeight="31.0" prefWidth="234.0" style="-fx-background-color: RGB(10,10,150);" text="Quay lại" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Button>
+                        <Label layoutX="169.0" layoutY="70.0" text="Nhập từ/đoạn văn bản tiếng Anh" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font></Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="SQLite">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: RGB(255,255,255);">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="60.0" layoutX="-2.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="605.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4dde5" height="217.0" layoutX="11.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="275.0" />
+                        <Label layoutX="225.0" layoutY="1.0" text="SQLite">
+                           <font>
+                              <Font name="Bauhaus 93" size="50.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfEnter" layoutX="20.0" layoutY="118.0" promptText="Nhập từ tiếng Anh">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <TextArea fx:id="taExplain" editable="false" layoutX="19.0" layoutY="185.0" prefHeight="126.0" prefWidth="260.0" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextArea>
+                        <Button fx:id="btsqSearch" layoutX="209.0" layoutY="118.0" mnemonicParsing="false" onAction="#clicksqSearch" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: RGB(0,128,192);" text="Tìm" textFill="#ffeeee">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Button>
+                        <Button fx:id="sqBack" layoutX="192.0" layoutY="334.0" mnemonicParsing="false" onAction="#clicksqBack" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: RGB(70,128,128);" text="Quay lại" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Button>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#09253e" height="40.0" layoutX="11.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="275.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#356677" height="21.0" layoutX="20.0" layoutY="164.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="102.0" />
+                        <Label layoutX="39.0" layoutY="165.0" text="Giải thích" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="101.0" layoutY="77.0" text="Anh - Việt" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4dde5" height="217.0" layoutX="311.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="275.0" />
+                        <TextField fx:id="tfEnterV" layoutX="320.0" layoutY="118.0" promptText="Nhập từ tiếng Việt">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextArea fx:id="taExplainA" editable="false" layoutX="319.0" layoutY="186.0" prefHeight="126.0" prefWidth="260.0" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextArea>
+                        <Button fx:id="btsqSearchV" layoutX="509.0" layoutY="118.0" mnemonicParsing="false" onAction="#clicksqSearchV" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: RGB(0,128,192);" text="Tìm" textFill="#fffafa">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#09253e" height="40.0" layoutX="311.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="275.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#356677" height="21.0" layoutX="320.0" layoutY="164.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="102.0" />
+                        <Label layoutX="334.0" layoutY="165.0" text="Giải thích" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="401.0" layoutY="77.0" text="Việt - Anh" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

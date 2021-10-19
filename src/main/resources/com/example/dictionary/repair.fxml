@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: RGB(255,255,255);" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.RepairController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="87.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="605.0" />
+      <Label layoutX="155.0" layoutY="18.0" text="Cập nhật từ điển">
+         <font>
+            <Font name="Constantia Bold Italic" size="38.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfAddE" layoutX="365.0" layoutY="158.0" prefHeight="46.0" prefWidth="223.0" promptText="Nhập từ tiếng Anh">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tfAddType" layoutX="365.0" layoutY="214.0" prefHeight="46.0" prefWidth="223.0" promptText="Nhập từ loại">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tfAddPro" layoutX="365.0" layoutY="270.0" prefHeight="46.0" prefWidth="223.0" promptText="Nhập phiên âm">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tfAddV" layoutX="365.0" layoutY="326.0" prefHeight="46.0" prefWidth="223.0" promptText="Nhập nghĩa tiếng Việt">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btAdd" alignment="BASELINE_LEFT" layoutX="24.0" layoutY="97.0" mnemonicParsing="false" onAction="#clickAddWord" prefHeight="68.0" prefWidth="200.0" style="-fx-background-color: RGB(215,250,0);" text="Thêm từ">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/icons8_add_50px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btRepair" alignment="BASELINE_LEFT" layoutX="22.0" layoutY="181.0" mnemonicParsing="false" onAction="#clickRepairWord" prefHeight="68.0" prefWidth="200.0" style="-fx-background-color: RGB(255,128,0);" text="Sửa từ">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="59.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/icons8_edit_50px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btDelete" alignment="BASELINE_LEFT" layoutX="22.0" layoutY="262.0" mnemonicParsing="false" onAction="#clickDeleteWord" prefHeight="68.0" prefWidth="200.0" style="-fx-background-color: RGB(233,200,118);" text="Xóa từ">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="56.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/icons8_delete_50px_1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btrBack" layoutX="23.0" layoutY="341.0" mnemonicParsing="false" onAction="#clickRpBack" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: RGB(0,170,170);" text="Quay lại" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0a243c" height="53.0" layoutX="254.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" width="332.0" />
+      <Label layoutX="339.0" layoutY="111.0" text="Nhập các thông tin" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c58a4" height="46.0" layoutX="254.0" layoutY="158.0" stroke="BLACK" strokeType="INSIDE" width="103.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c58a4" height="46.0" layoutX="254.0" layoutY="214.0" stroke="BLACK" strokeType="INSIDE" width="103.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c58a4" height="46.0" layoutX="254.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="103.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c58a4" height="46.0" layoutX="254.0" layoutY="326.0" stroke="BLACK" strokeType="INSIDE" width="103.0" />
+      <Label layoutX="291.0" layoutY="167.0" text="Từ" textFill="#fffafa">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="284.0" layoutY="223.0" text="Loại" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="279.0" text="Phiên âm" textFill="#fffcfc">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="335.0" text="Nghĩa" textFill="#ffffff">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
